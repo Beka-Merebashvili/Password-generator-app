@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url(../starter-code/assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono';
+}
+body {
+    background: #18171F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 64px;
+}
+h1 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #817D92;
+}
+.genereted-password {
+    width: 344px;
+    height: 64px;
+    background: #24232C;
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px 0 16px;
+}
+.genereted-password p {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #E6E5EA;
+}
+.genereted-password img {
+    object-fit: none;
+}
+.main-container {
+    width: 344px;
+    height: 430px;
+    background: #24232C;
+    padding: 16px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.charactar-length {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.character {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #E6E5EA;
+}
+.length {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42px;
+    color: #A4FFAF;
+}
+.slidecontainer {
+    width: 312px;
+    margin: 14px 0 32px 0;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #A4FFAF;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #E6E5EA;
+    cursor: pointer;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 16px;
+  }
+  .checkbox input {
+    width: 20px;
+    height: 20px;
+    color: #A4FFAF;
+  }
+  .checkbox label {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #E6E5EA;
+  }
+  .strengh {
+    width: 312px;
+    height: 56px;
+    background: #18171F;
+    margin: 16px 0;
+  }
+  button {
+    width: 312px;
+    height: 56px;
+    background: #A4FFAF;
+    font-size: 16px;
+    font-weight: 700;
+    color: #24232C;
+    border: none;
+  }
