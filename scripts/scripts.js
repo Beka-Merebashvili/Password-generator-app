@@ -55,21 +55,40 @@ let setCounter = 0 ;
         else {
             setCounter -= 1
         }
+        if(setCounter == 0) {
+            level.textContent = ""
+            colorBox[0].classList.remove('for-tooweak');
+        }
         if (setCounter == 1){
             level.textContent = "TOO WEAK!"
             colorBox[0].classList.add('for-tooweak');
+            colorBox[0].classList.remove('for-weak');
+            colorBox[1].classList.remove('for-weak');
         }
         if (setCounter == 2) {
             level.textContent = "WEAK"
             colorBox[0].classList.add('for-weak');
             colorBox[1].classList.add('for-weak');
-            colorBox[0].classList.remove('for-tooweak');
+            colorBox[0].classList.remove('for-medium');
+            colorBox[1].classList.remove('for-medium');
+            colorBox[2].classList.remove('for-medium');
         }
         if (setCounter == 3) {
             level.textContent = "MEDIUM"
+            colorBox[0].classList.add('for-medium');
+            colorBox[1].classList.add('for-medium');
+            colorBox[2].classList.add('for-medium');
+            colorBox[0].classList.remove('for-strong');
+            colorBox[1].classList.remove('for-strong');
+            colorBox[2].classList.remove('for-strong');
+            colorBox[3].classList.remove('for-strong');
         }
         if (setCounter == 4) {
             level.textContent = "STRONG"
+            colorBox[0].classList.add('for-strong');
+            colorBox[1].classList.add('for-strong');
+            colorBox[2].classList.add('for-strong');
+            colorBox[3].classList.add('for-strong');
         }
     })
     
