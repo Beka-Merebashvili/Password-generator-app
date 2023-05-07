@@ -8,8 +8,25 @@ const passdLength = document.getElementById('length');
 const checkbox =[...document.getElementsByClassName('checkbox-input')] 
 const level = document.getElementById('level');
 const colorBox = document.getElementsByClassName('color-box');
+// const line = document.getElementById('line');
+const copy = document.getElementById('copy');
+const copied = document.getElementById('copyed');
 
+copy.addEventListener('click', () => {
+  const textToCopy = password.textContent ;
+  const tempInput = document.createElement('input');
+  tempInput.setAttribute('value', textToCopy);
+  document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    copied.style.display = 'block';
+    setTimeout(function(){
+        copied.style.display = "none";
+      }, 2000);
+});
 
+ 
 
 function generetePaswword() {
     let setPassword = "" ;
@@ -51,9 +68,12 @@ let setCounter = 0 ;
     x.addEventListener('click' , () => {
         if (x.checked) {
             setCounter += 1
+            x.style.backgroundColor = '#A4FFAF';
+            x.style.backgroundImage = "url('../starter-code/assets/images/icon-check.svg')" ;
         }
         else {
             setCounter -= 1
+            x.style.background = '';
         }
         if(setCounter == 0) {
             level.textContent = ""
