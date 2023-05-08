@@ -50,6 +50,7 @@ h1 {
   font-size: 18px;
   font-weight: 700;
   color: #A4FFAF;
+  /* transition: 0.2s; */
   display: none;
 }
 .genereted-password img {
@@ -93,6 +94,7 @@ h1 {
   background: #A4FFAF;
   position: absolute;
   top: 8px;
+  z-index: 1;
 }
 .slider {
     appearance: none;
@@ -112,6 +114,8 @@ h1 {
     border-radius: 50%;
     background: #E6E5EA;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
   }
   .checkbox {
     display: flex;
@@ -197,4 +201,50 @@ h1 {
     font-weight: 700;
     color: #24232C;
     border: none;
+  }
+
+
+
+
+  /* styles for desktop */
+
+
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 24px;
+    }
+    .genereted-password {
+      width: 540px;
+      height: 80px;
+      padding: 0 28px 0 32px;
+    }
+    #password {
+      font-size: 32px;
+      width: 250px;
+    }
+    .main-container {
+      width: 540px;
+      height: 528px;
+      padding: 34px 32px 0 32px;
+    }
+    .character {
+      font-size: 18px;
+    }
+    .length {
+      font-size: 32px;
+    }
+    .slidecontainer {
+      width: 476px;
+    }
+    .checkbox label {
+      font-size: 18px;
+    }
+    .strengh {
+      width: 476px;
+      height: 72px;
+    }
+    button {
+      width: 476px;
+      height: 65px;
+    }
   }

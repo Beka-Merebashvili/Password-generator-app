@@ -8,7 +8,7 @@ const passdLength = document.getElementById('length');
 const checkbox =[...document.getElementsByClassName('checkbox-input')] 
 const level = document.getElementById('level');
 const colorBox = document.getElementsByClassName('color-box');
-// const line = document.getElementById('line');
+const line = document.getElementById('line');
 const copy = document.getElementById('copy');
 const copied = document.getElementById('copyed');
 
@@ -20,10 +20,12 @@ copy.addEventListener('click', () => {
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
-    copied.style.display = 'block';
-    setTimeout(function(){
-        copied.style.display = "none";
-      }, 2000);
+    if(textToCopy != '') {
+        copied.style.display = 'block';
+        setTimeout(function(){
+            copied.style.display = "none";
+          }, 2000);
+    }
 });
 
  
@@ -40,7 +42,7 @@ function generetePaswword() {
         setPassword += "0123456789"
     }
     if(symbols.checked){
-        setPassword += "~`!@#$%^&*()_-+={[}]|\:;'<,>.?/"
+        setPassword += "~`!@#$%^&*()_+={[}]:;'<,>.?/"
     }
 
     let generatedPassword = ''
@@ -59,6 +61,7 @@ function generetePaswword() {
 
 passwordLength.addEventListener("input" , () => {
     passdLength.textContent = passwordLength.value;
+    line.style.width = `${5*passwordLength.value}%`
 }) ;
 
 
