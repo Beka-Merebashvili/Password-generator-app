@@ -242,9 +242,41 @@ h1 {
     .strengh {
       width: 476px;
       height: 72px;
+      padding: 0 22px 0 32px;
     }
     button {
       width: 476px;
       height: 65px;
+      font-size: 18px;
+    }
+    button:hover {
+      cursor: pointer;
+      background: #24232C;
+      border: 2px solid #A4FFAF;
+      color: #A4FFAF;
+      transition: 0.3s;
+    }
+    button:hover img {
+      filter: invert(96%) sepia(2%) saturate(7059%) hue-rotate(60deg) brightness(100%) contrast(103%);
+      transition: 0.3s;
+    }
+  }
+  
+
+
+  @media only screen and (min-width: 1440px) {
+    #copy:hover{
+      cursor: pointer;
+      filter: invert(100%) sepia(7%) saturate(7477%) hue-rotate(292deg) brightness(108%) contrast(98%);
+    }
+    .checkbox-input:hover {
+      cursor: pointer;
+        border: 2px solid #A4FFAF;
+        transition: 0.2s;
+    }
+    .slider::-webkit-slider-thumb:hover{
+      background: #18171F;
+   border: 2px solid #A4FFAF;
+   transition: 0.2s;
     }
   }
